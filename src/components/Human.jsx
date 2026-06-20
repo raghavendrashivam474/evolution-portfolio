@@ -42,7 +42,7 @@ export default function Human() {
 
         {/* Heading */}
         <h1 style={{ fontSize: 'clamp(40px, 8vw, 72px)', fontWeight: 700, marginBottom: '24px', lineHeight: 1.1 }}>
-          Hi, I'm <span style={{ color: '#34d399' }}>Raghavendra Singh🚀 Deployment Test</span>
+          Hi, I'm <span style={{ color: '#34d399' }}>Raghavendra Singh</span>
           <br />
           <span style={{ color: '#9ca3af' }}>I build impactful solutions.</span>
         </h1>
