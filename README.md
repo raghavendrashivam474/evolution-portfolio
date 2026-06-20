@@ -157,6 +157,6 @@ Command palette navigation
 AI-powered project descriptions
 Analytics integration
 📬 Contact
-LinkedIn → https://www.linkedin.com/in/raghavendra-singh-2335292ab/
+LinkedIn → **https://www.linkedin.com/in/raghavendra-singh-2335292ab/**
 Email → raghavendrashivam474@gmail.com
 
