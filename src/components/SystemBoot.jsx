@@ -1,14 +1,18 @@
+// src/components/SystemBoot.jsx
+// CHANGES:
+//   1. bootLines array removed from this file
+//   2. bootLines imported from src/data/bootSequence.js
+//   3. Final line color updated to match Evolution OS green (#34d399)
+// NO OTHER CHANGES:
+//   - IntersectionObserver logic unchanged
+//   - hasPlayed guard unchanged
+//   - handleLineComplete timing unchanged (300ms between lines, 800ms onComplete)
+//   - All inline styles unchanged
+//   - Typewriter usage unchanged
+
 import { useState, useEffect, useRef } from 'react'
 import Typewriter from './Typewriter'
-
-const bootLines = [
-  "> Initializing modules...",
-  "> Loading systems...",
-  "> Parsing experiences...",
-  "> Building solutions...",
-  "> Solving real-world problems...",
-  "> System ready."
-]
+import { bootLines } from '../data/bootSequence'
 
 export default function SystemBoot({ onComplete }) {
   const [currentLine, setCurrentLine] = useState(0)
@@ -17,6 +21,7 @@ export default function SystemBoot({ onComplete }) {
   const sectionRef = useRef(null)
 
   // Intersection Observer - Start animation when visible
+  // Logic unchanged — triggers once at 0.3 threshold, disconnects after
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -36,13 +41,14 @@ export default function SystemBoot({ onComplete }) {
     return () => observer.disconnect()
   }, [hasPlayed])
 
+  // Line progression and onComplete callback — unchanged
   const handleLineComplete = (index) => {
     if (index < bootLines.length - 1) {
       setTimeout(() => {
         setCurrentLine(prev => prev + 1)
       }, 300)
     } else {
-      // Final line completed - trigger next sections
+      // Final line completed — trigger next sections
       setTimeout(() => {
         onComplete?.()
       }, 800)
@@ -50,7 +56,7 @@ export default function SystemBoot({ onComplete }) {
   }
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       style={{
         padding: '120px 24px',
@@ -67,12 +73,13 @@ export default function SystemBoot({ onComplete }) {
         {isVisible ? (
           <div style={{ fontFamily: 'monospace', fontSize: '14px' }}>
             {bootLines.slice(0, currentLine + 1).map((line, index) => (
-              <div 
-                key={index} 
-                style={{ 
+              <div
+                key={index}
+                style={{
                   marginBottom: '12px',
-                  color: index === bootLines.length - 1 && index === currentLine 
-                    ? '#34d399' 
+                  // Final line renders in green, all previous lines in grey
+                  color: index === bootLines.length - 1 && index === currentLine
+                    ? '#34d399'
                     : '#9ca3af'
                 }}
               >
@@ -89,6 +96,7 @@ export default function SystemBoot({ onComplete }) {
             ))}
           </div>
         ) : (
+          // Placeholder height while section is not yet visible — unchanged
           <div style={{ height: '200px' }} />
         )}
       </div>

@@ -1,38 +1,53 @@
 export default function Humanoid() {
   const skills = [
-    { category: "UI Engine", items: ["React", "React Native", "Tailwind CSS"] },
-    { category: "Processing Unit", items: ["Node.js", "FastAPI", "Python"] },
-    { category: "Data Systems", items: ["Firebase", "Supabase", "PostgreSQL"] }
+    { category: "UI Engine", items: ["React", "TypeScript", "Tailwind CSS"] },
+    { category: "Processing Unit", items: ["Node.js", "Express.js", "REST APIs"] },
+    { category: "Data Systems", items: ["MongoDB", "Supabase", "Redis"] },
+    { category: "Intelligence Layer", items: ["AI Product Design", "Prompt Engineering", "LLM Integrations"] }
   ]
 
   const nextModules = [
-    "Neural Networks",
-    "Scalable Systems",
-    "Security Architecture"
+    "System Architecture",
+    "Scalable Infrastructure",
+    "AI-Native Products"
   ]
 
+  const currentOperations = [
+    { label: "ACTIVE",     display: "Syaahi v0.2.0" },
+    { label: "BUILDING",   display: "GradeFlow MVP" },
+    { label: "RESEARCH",   display: "SchoolFlow OS" },
+    { label: "EXPLORING",  display: "AI Products & Intelligent Systems" }
+  ]
+
+  const statusColors = {
+    ACTIVE:    "#34d399",
+    BUILDING:  "#00cfff",
+    RESEARCH:  "#ffaa00",
+    EXPLORING: "#cc88ff"
+  }
+
   return (
-    <section id="about" style={{ 
-      padding: '100px 24px', 
-      backgroundColor: '#0a0a0a' 
+    <section id="about" style={{
+      padding: '100px 24px',
+      backgroundColor: '#0a0a0a'
     }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        
+
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <p style={{ 
-            color: '#34d399', 
-            fontFamily: 'monospace', 
-            fontSize: '12px', 
+          <p style={{
+            color: '#34d399',
+            fontFamily: 'monospace',
+            fontSize: '12px',
             marginBottom: '12px',
             letterSpacing: '2px',
             textTransform: 'uppercase'
           }}>
             // SYSTEM_STATUS
           </p>
-          <h2 style={{ 
-            fontSize: 'clamp(32px, 5vw, 48px)', 
-            fontWeight: 700, 
+          <h2 style={{
+            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontWeight: 700,
             marginBottom: '12px',
             color: '#ffffff',
             letterSpacing: '-1px'
@@ -50,15 +65,15 @@ export default function Humanoid() {
         </div>
 
         {/* Skills Grid */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-          gap: '20px', 
-          marginBottom: '80px' 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '20px',
+          marginBottom: '80px'
         }}>
           {skills.map((skill, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               style={{
                 backgroundColor: 'rgba(255,255,255,0.03)',
                 backdropFilter: 'blur(10px)',
@@ -98,10 +113,10 @@ export default function Humanoid() {
               }} />
 
               <div>
-                <h3 style={{ 
-                  color: '#34d399', 
-                  fontSize: '13px', 
-                  fontFamily: 'monospace', 
+                <h3 style={{
+                  color: '#34d399',
+                  fontSize: '13px',
+                  fontFamily: 'monospace',
                   marginBottom: '16px',
                   fontWeight: 600,
                   letterSpacing: '1px',
@@ -109,14 +124,10 @@ export default function Humanoid() {
                 }}>
                   {skill.category}
                 </h3>
-                <div style={{ 
-                  display: 'flex', 
-                  flexWrap: 'wrap', 
-                  gap: '8px' 
-                }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {skill.items.map((item, j) => (
-                    <span 
-                      key={j} 
+                    <span
+                      key={j}
                       style={{
                         backgroundColor: 'rgba(255,255,255,0.06)',
                         border: '1px solid rgba(255,255,255,0.1)',
@@ -157,7 +168,7 @@ export default function Humanoid() {
           maxWidth: '600px',
           margin: '0 auto 80px'
         }}>
-          <div style={{ 
+          <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '20px',
@@ -166,27 +177,28 @@ export default function Humanoid() {
           }}>
             <div>
               <p style={{ color: '#6b7280', marginBottom: '4px' }}>ID:</p>
-              <p style={{ color: '#34d399', fontWeight: 600 }}>Raghu_007</p>            </div>
+              <p style={{ color: '#34d399', fontWeight: 600 }}>Raghu_007</p>
+            </div>
             <div>
               <p style={{ color: '#6b7280', marginBottom: '4px' }}>Role:</p>
-              <p style={{ color: '#ffffff' }}>Software Engineer</p>
+              <p style={{ color: '#ffffff' }}>Engineer · Builder · Founder</p>
             </div>
             <div>
               <p style={{ color: '#6b7280', marginBottom: '4px' }}>Focus:</p>
-              <p style={{ color: '#ffffff' }}>Healthcare & Beyond</p>
+              <p style={{ color: '#ffffff' }}>AI • Education • Creativity</p>
             </div>
             <div>
               <p style={{ color: '#6b7280', marginBottom: '4px' }}>Status:</p>
-              <p style={{ 
-                color: '#34d399', 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '6px' 
+              <p style={{
+                color: '#34d399',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
               }}>
-                <span style={{ 
-                  width: '8px', 
-                  height: '8px', 
-                  backgroundColor: '#34d399', 
+                <span style={{
+                  width: '8px',
+                  height: '8px',
+                  backgroundColor: '#34d399',
                   borderRadius: '50%',
                   display: 'inline-block'
                 }}></span>
@@ -196,31 +208,82 @@ export default function Humanoid() {
           </div>
         </div>
 
+        {/* Current Operations */}
+        <div style={{
+          marginBottom: '60px',
+          backgroundColor: 'rgba(255,255,255,0.02)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          borderRadius: '16px',
+          padding: '32px'
+        }}>
+          <p style={{
+            color: '#34d399',
+            fontSize: '12px',
+            fontFamily: 'monospace',
+            marginBottom: '24px',
+            letterSpacing: '2px',
+            textTransform: 'uppercase'
+          }}>
+            // CURRENT_OPERATIONS
+          </p>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px'
+          }}>
+            {currentOperations.map((op, i) => (
+              <div
+                key={i}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  fontFamily: 'monospace',
+                  fontSize: '14px'
+                }}
+              >
+                <span style={{
+                  color: statusColors[op.label],
+                  fontWeight: 700,
+                  letterSpacing: '1px',
+                  minWidth: '110px',
+                  fontSize: '12px'
+                }}>
+                  [ {op.label} ]
+                </span>
+                <span style={{ color: '#e5e7eb' }}>
+                  {op.display}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Loading Next Modules */}
-        <div style={{ 
-          borderTop: '1px solid rgba(255,255,255,0.1)', 
+        <div style={{
+          borderTop: '1px solid rgba(255,255,255,0.1)',
           paddingTop: '60px',
           textAlign: 'center'
         }}>
-          <p style={{ 
-            color: '#34d399', 
-            fontSize: '12px', 
-            fontFamily: 'monospace', 
+          <p style={{
+            color: '#34d399',
+            fontSize: '12px',
+            fontFamily: 'monospace',
             marginBottom: '24px',
             letterSpacing: '2px',
             textTransform: 'uppercase'
           }}>
             Loading Next Modules
           </p>
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            flexWrap: 'wrap', 
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
             gap: '12px',
             marginBottom: '60px'
           }}>
             {nextModules.map((module, i) => (
-              <div 
+              <div
                 key={i}
                 style={{
                   backgroundColor: 'rgba(255,255,255,0.02)',
@@ -249,9 +312,9 @@ export default function Humanoid() {
           </div>
 
           {/* Final Line */}
-          <p style={{ 
-            color: '#6b7280', 
-            fontFamily: 'monospace', 
+          <p style={{
+            color: '#6b7280',
+            fontFamily: 'monospace',
             fontSize: '13px',
             marginBottom: '60px'
           }}>
@@ -259,7 +322,7 @@ export default function Humanoid() {
           </p>
         </div>
 
-        {/* Contact CTA */}
+        {/* Contact CTA — unchanged */}
         <div id="contact" style={{
           textAlign: 'center',
           padding: '60px 40px',
@@ -281,24 +344,24 @@ export default function Humanoid() {
           }} />
 
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <h3 style={{ 
-              fontSize: '32px', 
-              fontWeight: 700, 
+            <h3 style={{
+              fontSize: '32px',
+              fontWeight: 700,
               marginBottom: '16px',
               color: '#ffffff'
             }}>
               Let's Build Together
             </h3>
-            <p style={{ 
-              color: '#9ca3af', 
-              marginBottom: '32px', 
-              maxWidth: '500px', 
+            <p style={{
+              color: '#9ca3af',
+              marginBottom: '32px',
+              maxWidth: '500px',
               margin: '0 auto 32px',
               lineHeight: 1.6
             }}>
-              Open to new opportunities and interesting healthcare projects.
+              Open to collaborations, builds, and conversations.
             </p>
-            <a 
+            <a
               href="mailto:raghavendrashivam474@gmail.com"
               style={{
                 backgroundColor: '#34d399',
@@ -332,6 +395,7 @@ export default function Humanoid() {
             </a>
           </div>
         </div>
+
       </div>
     </section>
   )
