@@ -24,17 +24,15 @@ The experience is scroll-triggered and animation-synchronized.
 ---
 
 ## 🏗 Architecture
-App.jsx
-│
-├── Section.jsx → Animation wrapper + visibility gating
-├── Human.jsx → Hero / identity layer
-├── SystemBoot.jsx → Typewriter boot sequence (IntersectionObserver)
-├── Transformation.jsx → Mission cards (projects)
-├── Humanoid.jsx → Core modules + Current operations
-└── Typewriter.jsx → Text animation primitive
 
-text
-
+    App.jsx
+    │
+    ├── Section.jsx        → Animation wrapper + visibility gating
+    ├── Human.jsx          → Hero / identity layer
+    ├── SystemBoot.jsx     → Typewriter boot sequence (IntersectionObserver)
+    ├── Transformation.jsx → Mission cards (projects)
+    ├── Humanoid.jsx       → Core modules + Current operations
+    └── Typewriter.jsx     → Text animation primitive
 
 ### State Flow
 
@@ -42,7 +40,7 @@ text
 - Boot completion triggers:
   - Projects reveal (~800ms delay)
   - Core modules reveal (~1600ms delay)
-- Controlled via state in `App.jsx`.
+- Controlled via state in App.jsx.
 
 ---
 
