@@ -5,7 +5,7 @@
 Evolution Portfolio transforms a traditional portfolio into an interactive **state machine experience**.  
 Instead of scrolling through static sections, visitors witness a boot sequence that unlocks projects and system modules progressively.
 
-Live Site → **[your-vercel-link-here]**
+Live Site → evolution-portfolio.vercel.app
 
 ---
 
