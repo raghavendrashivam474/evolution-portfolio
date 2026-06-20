@@ -156,7 +156,13 @@ Motion micro-interactions
 Command palette navigation
 AI-powered project descriptions
 Analytics integration
-📬 Contact
-LinkedIn → **https://www.linkedin.com/in/raghavendra-singh-2335292ab/**
-Email → raghavendrashivam474@gmail.com
+## 📬 Transmission Channels
+
+LinkedIn → [Raghavendra Singh](https://www.linkedin.com/in/raghavendra-singh-2335292ab/)
+
+GitHub → [raghavendrashivam474](https://github.com/raghavendrashivam474)
+
+Email → [raghavendrashivam474@gmail.com](mailto:raghavendrashivam474@gmail.com)
+
+Status → Available for collaboration, internships, and product discussions.
 
