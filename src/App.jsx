@@ -101,7 +101,7 @@ function App() {
             <p>© 2025 Raghavendra Singh</p>
             <div style={{ display: 'flex', gap: '24px' }}>
               <a 
-                href="https://github.com/YOUR_USERNAME" 
+                href="https://github.com/raghavendrashivam474" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ 
