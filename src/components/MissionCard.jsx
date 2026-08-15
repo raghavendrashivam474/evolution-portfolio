@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 
 export default function MissionCard({ project }) {
   const [isHovered, setIsHovered] = useState(false)
@@ -25,8 +25,8 @@ export default function MissionCard({ project }) {
     >
       {/* DEFAULT STATE */}
       {!isExpanded && (
-        <div style={{ 
-          display: 'grid', 
+        <div style={{
+          display: 'grid',
           gridTemplateColumns: '1fr auto',
           gap: '40px',
           alignItems: 'start'
@@ -34,7 +34,7 @@ export default function MissionCard({ project }) {
           {/* LEFT - Content */}
           <div style={{ maxWidth: '600px' }}>
             {/* Header */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
               <span style={{
                 backgroundColor: 'rgba(52, 211, 153, 0.15)',
                 border: '1px solid rgba(52, 211, 153, 0.3)',
@@ -47,36 +47,38 @@ export default function MissionCard({ project }) {
               }}>
                 MISSION {project.id}
               </span>
-              <span style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '6px', 
-                color: '#6b7280', 
-                fontSize: '12px' 
+              {/* Data-driven status — no hardcoded "Active" */}
+              <span style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                color: '#6b7280',
+                fontSize: '12px',
+                fontFamily: 'monospace'
               }}>
-                <span style={{ 
-                  width: '6px', 
-                  height: '6px', 
-                  backgroundColor: '#34d399', 
-                  borderRadius: '50%' 
+                <span style={{
+                  width: '6px',
+                  height: '6px',
+                  backgroundColor: '#34d399',
+                  borderRadius: '50%'
                 }}></span>
-                Active
+                {project.status}
               </span>
             </div>
 
             {/* Title */}
-            <h3 style={{ 
-              fontSize: '28px', 
-              fontWeight: 700, 
+            <h3 style={{
+              fontSize: '28px',
+              fontWeight: 700,
               marginBottom: '10px',
               color: '#ffffff'
             }}>
               {project.title}
             </h3>
-            
-            <p style={{ 
-              fontSize: '16px', 
-              color: '#9ca3af', 
+
+            <p style={{
+              fontSize: '16px',
+              color: '#9ca3af',
               lineHeight: 1.6,
               marginBottom: isHovered ? '24px' : '0'
             }}>
@@ -85,23 +87,23 @@ export default function MissionCard({ project }) {
 
             {/* Hover Preview */}
             {isHovered && (
-              <div style={{ 
-                paddingLeft: '16px', 
+              <div style={{
+                paddingLeft: '16px',
                 borderLeft: '2px solid rgba(52, 211, 153, 0.4)'
               }}>
-                <p style={{ 
-                  color: '#34d399', 
-                  fontSize: '11px', 
-                  fontFamily: 'monospace', 
-                  marginBottom: '12px', 
+                <p style={{
+                  color: '#34d399',
+                  fontSize: '11px',
+                  fontFamily: 'monospace',
+                  marginBottom: '12px',
                   textTransform: 'uppercase'
                 }}>
                   Quick Preview
                 </p>
                 {project.preview.map((item, i) => (
-                  <p key={i} style={{ 
-                    color: '#d1d5db', 
-                    fontSize: '14px', 
+                  <p key={i} style={{
+                    color: '#d1d5db',
+                    fontSize: '14px',
                     marginBottom: '6px'
                   }}>
                     <span style={{ color: '#34d399', marginRight: '8px' }}>→</span>
@@ -113,7 +115,7 @@ export default function MissionCard({ project }) {
           </div>
 
           {/* RIGHT - Action Hint */}
-          <div style={{ 
+          <div style={{
             textAlign: 'right',
             fontFamily: 'monospace',
             fontSize: '11px',
@@ -128,13 +130,15 @@ export default function MissionCard({ project }) {
       {isExpanded && (
         <div>
           {/* Header */}
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center', 
-            marginBottom: '24px' 
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '24px',
+            flexWrap: 'wrap',
+            gap: '12px'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <span style={{
                 backgroundColor: 'rgba(52, 211, 153, 0.15)',
                 border: '1px solid rgba(52, 211, 153, 0.3)',
@@ -147,60 +151,63 @@ export default function MissionCard({ project }) {
               }}>
                 MISSION {project.id}
               </span>
-              <span style={{ color: '#34d399', fontSize: '12px' }}>● EXPANDED</span>
+              {/* Data-driven status in expanded header too */}
+              <span style={{ color: '#34d399', fontSize: '12px', fontFamily: 'monospace' }}>
+                ● {project.status}
+              </span>
             </div>
-            <span style={{ 
-              color: '#6b7280', 
-              fontSize: '11px', 
-              fontFamily: 'monospace' 
+            <span style={{
+              color: '#6b7280',
+              fontSize: '11px',
+              fontFamily: 'monospace'
             }}>
               [ CLICK TO COLLAPSE ]
             </span>
           </div>
 
           {/* Title */}
-          <h3 style={{ 
-            fontSize: '32px', 
-            fontWeight: 700, 
+          <h3 style={{
+            fontSize: '32px',
+            fontWeight: 700,
             marginBottom: '10px',
             color: '#ffffff'
           }}>
             {project.title}
           </h3>
-          <p style={{ 
-            fontSize: '18px', 
-            color: '#9ca3af', 
-            marginBottom: '32px' 
+          <p style={{
+            fontSize: '18px',
+            color: '#9ca3af',
+            marginBottom: '32px'
           }}>
             {project.tagline}
           </p>
 
           {/* Problem & Solution */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-            gap: '24px', 
-            marginBottom: '32px' 
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '24px',
+            marginBottom: '32px'
           }}>
             <div>
-              <p style={{ 
-                color: '#34d399', 
-                fontSize: '11px', 
-                fontFamily: 'monospace', 
-                marginBottom: '10px', 
-                textTransform: 'uppercase' 
+              <p style={{
+                color: '#34d399',
+                fontSize: '11px',
+                fontFamily: 'monospace',
+                marginBottom: '10px',
+                textTransform: 'uppercase'
               }}>
                 Problem
               </p>
               <p style={{ color: '#d1d5db', lineHeight: 1.7 }}>{project.problem}</p>
             </div>
             <div>
-              <p style={{ 
-                color: '#34d399', 
-                fontSize: '11px', 
-                fontFamily: 'monospace', 
-                marginBottom: '10px', 
-                textTransform: 'uppercase' 
+              <p style={{
+                color: '#34d399',
+                fontSize: '11px',
+                fontFamily: 'monospace',
+                marginBottom: '10px',
+                textTransform: 'uppercase'
               }}>
                 Solution
               </p>
@@ -210,19 +217,19 @@ export default function MissionCard({ project }) {
 
           {/* Features */}
           <div style={{ marginBottom: '32px' }}>
-            <p style={{ 
-              color: '#34d399', 
-              fontSize: '11px', 
-              fontFamily: 'monospace', 
-              marginBottom: '12px', 
-              textTransform: 'uppercase' 
+            <p style={{
+              color: '#34d399',
+              fontSize: '11px',
+              fontFamily: 'monospace',
+              marginBottom: '12px',
+              textTransform: 'uppercase'
             }}>
               Key Features
             </p>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-              gap: '8px' 
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '8px'
             }}>
               {project.preview.map((item, i) => (
                 <p key={i} style={{ color: '#9ca3af', fontSize: '14px' }}>
@@ -233,26 +240,27 @@ export default function MissionCard({ project }) {
             </div>
           </div>
 
-          {/* Tech Stack */}
+          {/* Tech Stack — data is an array; map directly */}
           <div style={{ marginBottom: '32px' }}>
-            <p style={{ 
-              color: '#34d399', 
-              fontSize: '11px', 
-              fontFamily: 'monospace', 
-              marginBottom: '12px', 
-              textTransform: 'uppercase' 
+            <p style={{
+              color: '#34d399',
+              fontSize: '11px',
+              fontFamily: 'monospace',
+              marginBottom: '12px',
+              textTransform: 'uppercase'
             }}>
               Tech Stack
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {project.tech.split(', ').map((tech, i) => (
+              {(Array.isArray(project.tech) ? project.tech : []).map((tech, i) => (
                 <span key={i} style={{
                   backgroundColor: 'rgba(255,255,255,0.05)',
                   border: '1px solid rgba(255,255,255,0.1)',
                   padding: '8px 16px',
                   borderRadius: '8px',
                   fontSize: '13px',
-                  color: '#d1d5db'
+                  color: '#d1d5db',
+                  fontFamily: 'monospace'
                 }}>
                   {tech}
                 </span>
@@ -260,7 +268,7 @@ export default function MissionCard({ project }) {
             </div>
           </div>
 
-          {/* Impact */}
+          {/* Impact / Current State */}
           {project.impact && (
             <div style={{
               backgroundColor: 'rgba(52, 211, 153, 0.1)',
@@ -269,44 +277,51 @@ export default function MissionCard({ project }) {
               borderRadius: '12px',
               marginBottom: '32px'
             }}>
-              <p style={{ color: '#34d399', fontSize: '15px' }}>
+              <p style={{ color: '#34d399', fontSize: '15px', lineHeight: 1.6 }}>
                 💡 {project.impact}
               </p>
             </div>
           )}
 
-          {/* Buttons */}
+          {/* Buttons — APK only renders when project.apk is a truthy URL */}
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            <a
-              href={project.apk}
-              onClick={(e) => e.stopPropagation()}
-              style={{
-                backgroundColor: '#34d399',
-                color: '#000000',
-                padding: '14px 28px',
-                borderRadius: '12px',
-                fontWeight: 600,
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: '14px'
-              }}
-            >
-              ⬇️ Download APK
-            </a>
-            <a
-              href={project.github}
-              onClick={(e) => e.stopPropagation()}
-              style={{
-                color: '#9ca3af',
-                padding: '14px 20px',
-                textDecoration: 'none',
-                fontSize: '14px'
-              }}
-            >
-              View Source →
-            </a>
+            {project.apk && (
+              <a
+                href={project.apk}
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  backgroundColor: '#34d399',
+                  color: '#000000',
+                  padding: '14px 28px',
+                  borderRadius: '12px',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontSize: '14px'
+                }}
+              >
+                ⬇ Download APK
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  color: '#9ca3af',
+                  padding: '14px 20px',
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  fontFamily: 'monospace'
+                }}
+              >
+                View Source →
+              </a>
+            )}
           </div>
         </div>
       )}

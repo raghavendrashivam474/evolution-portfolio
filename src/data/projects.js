@@ -1,32 +1,51 @@
 ﻿// ============================================================
 // src/data/projects.js
 // SINGLE SOURCE OF TRUTH for all mission and project data.
-// Transformation.jsx imports from here — no local project arrays.
-// ============================================================
-
-// ============================================================
-// ACTIVE MISSIONS — Flagship systems currently being built
+//
+// Content is verified against the current public repositories.
+// Do NOT infer capabilities from names, roadmaps, or vision docs.
+// Source of truth hierarchy:
+//   Actual repository → Current README → Current implementation → this file
+//
+// tech: activeMissions use arrays (rendered as badges)
+//       otherSystems use strings   (rendered as plain text)
 // ============================================================
 
 export const activeMissions = [
   {
     id: "01",
     title: "Aryntra Anveksha",
-    tagline: "Organizational Intelligence",
+    tagline: "AI-Powered Preventive Health Screening Platform",
     preview: [
-      "Institutional knowledge graph construction",
-      "Document ingestion and semantic indexing",
-      "Natural language querying over org knowledge",
-      "Context-aware retrieval and summarization"
+      "Patient management and persistent patient records",
+      "Structured screening sessions with deterministic risk assessment",
+      "AI-generated health insights and personalized recommendations",
+      "Provider-agnostic AI architecture (Ollama, OpenAI, Mock)",
+      "Health dashboard with KPI, demographic, risk, and trend analytics",
+      "Audit events, persistent audit records, and read-only audit API"
     ],
     problem:
-      "Organizations accumulate vast institutional knowledge across documents, wikis, and conversations — yet this knowledge remains fragmented and practically inaccessible. Teams waste hours searching for information that already exists somewhere in the system.",
+      "Preventive health screening requires structured assessment and reliable risk classification, while users also need understandable insights and recommendations. The system addresses this by combining deterministic screening decisions with AI-assisted explanations and recommendations while keeping the deterministic engine as the source of truth.",
     solution:
-      "Anveksha is an organizational intelligence system that ingests institutional documents, constructs a semantic knowledge layer, and enables natural language querying over the organization's collective knowledge. It makes existing knowledge findable and actionable.",
-    tech: "Python · LangChain · Vector Databases · Semantic Search · Document Parsing · LLM Integration",
+      "Anveksha is a production-oriented preventive health screening platform that lets users complete structured screenings, produces deterministic risk assessments, and augments those results with validated AI-generated health insights and personalized recommendations. It also provides analytics, reporting infrastructure, and auditability around the screening workflow.",
+    tech: [
+      "Python 3",
+      "FastAPI",
+      "SQLAlchemy",
+      "Pydantic",
+      "Pytest",
+      "Ollama",
+      "OpenAI SDK",
+      "Next.js 14",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Jest",
+      "React Testing Library"
+    ],
     impact:
-      "Transforms static document repositories into queryable, living knowledge systems that surface the right information when teams need it.",
-    status: "ACTIVE",
+      "v0.9.4 — M9.4 Dashboard Analytics. M1–M9.4 completed. 1126 backend tests passed, 132 frontend tests passed, frontend production build passed. Next: M9.5 Reports UI → M9.6 Audit UI.",
+    status: "ACTIVE — M9.4 Complete",
     github: "https://github.com/raghavendrashivam474/Aryntra_Anveksha",
     apk: ""
   },
@@ -34,21 +53,27 @@ export const activeMissions = [
   {
     id: "02",
     title: "Aryntra Aayaam",
-    tagline: "Developer Intelligence",
+    tagline: "Developer Project Awareness CLI",
     preview: [
-      "Software repository analysis and understanding",
-      "Codebase relationship and dependency mapping",
-      "Code capability and impact surface extraction",
-      "Developer-facing intelligence layer over software systems"
+      "CLI foundation and application entry point",
+      "CLI argument parsing",
+      "Version and help commands",
+      "Terminal and JSON-oriented output architecture",
+      "Project-awareness architecture prepared for subsequent analysis capabilities"
     ],
     problem:
-      "Software systems grow in complexity faster than any individual's ability to understand them. Developers spend significant time orienting themselves in unfamiliar codebases, tracing dependencies, and understanding the impact surface of changes — time that should be spent building.",
+      "Developers need a quick way to understand the current state of a software project without manually inspecting its structure and metadata.",
     solution:
-      "Aayaam is a developer intelligence system that analyzes software repositories to extract structure, relationships, capabilities, and evolution patterns. It builds an understanding layer over codebases so developers can navigate and reason about software systems faster.",
-    tech: "Python · Static Analysis · AST Parsing · Graph Structures · LLM Integration · Repository Indexing",
+      "Aayaam is a lightweight developer utility CLI designed to provide project awareness. The current release establishes the CLI foundation; deeper project analysis and inspection capabilities are planned for subsequent sprints.",
+    tech: [
+      "Go",
+      "Go CLI",
+      "Terminal Output",
+      "JSON Output Architecture"
+    ],
     impact:
-      "Reduces the cognitive overhead of working with complex software systems by building a machine-readable understanding of what a codebase does, how it is structured, and how its parts relate.",
-    status: "ACTIVE",
+      "v1.0.0 — Sprint 1: Foundation. CLI operational. Project analysis begins in Sprint 2.",
+    status: "ACTIVE — Foundation",
     github: "https://github.com/raghavendrashivam474/aryntra-aayaam",
     apk: ""
   },
@@ -56,29 +81,40 @@ export const activeMissions = [
   {
     id: "03",
     title: "Aryntra Tarka",
-    tagline: "Local AI Infrastructure",
+    tagline: "Transparent Local-First AI Agent",
     preview: [
-      "Modular AI orchestration backend",
-      "Intelligent planner with ~90% baseline accuracy",
-      "Tool registry: calculator, datetime, search, weather",
-      "Prompt building, expression normalization, execution planning"
+      "Natural-language request understanding",
+      "Autonomous multi-step planning",
+      "Structured execution planning and transparent tool execution",
+      "Extensible tool registry (Calculator, Date & Time, Filesystem)",
+      "Real-time response streaming through SSE",
+      "Persistent conversation history and local AI via Ollama"
     ],
     problem:
-      "Building AI applications that rely entirely on cloud APIs creates dependency, latency, and cost problems. There is no clean, modular infrastructure layer for running AI planning and tool orchestration locally — forcing builders to either over-engineer from scratch or accept cloud lock-in.",
+      "AI applications that simply forward prompts to a language model provide limited visibility into how a request is planned and executed. Tarka addresses the need for a local-first agent architecture where planning, tool invocation, execution, and resulting responses are explicit and observable.",
     solution:
-      "Tarka is a local AI infrastructure and intelligent orchestration framework. It provides a modular backend with an intelligent planner, a tool registry with concrete tool implementations, prompt construction pipelines, expression normalization, and execution planning — designed to run AI reasoning workloads locally and reliably.",
-    tech: "Python · Local LLM Inference · Tool Registry Architecture · Prompt Engineering · Execution Planning · Planner Evaluation",
+      "Tarka is a local-first autonomous AI agent that converts natural-language requests into structured execution plans, invokes the required tools, collects execution results, streams the response, and persists conversation history. Its architecture separates the planner, runtime, tool registry, memory, and LLM provider.",
+    tech: [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Ollama",
+      "SQLite",
+      "Server-Sent Events",
+      "Tailwind CSS"
+    ],
     impact:
-      "Current planner baseline at approximately 90% accuracy. Active sprint focus on planner stabilization and execution reliability. Provides a reusable AI infrastructure foundation for the broader Aryntra ecosystem.",
-    status: "ACTIVE — Stabilizing",
+      "v1.0.0 — Stable. Autonomous planning, local-first AI, tool execution, SQLite persistence, and streaming responses complete. Planned: Web Search, RAG, File Understanding, Plugin System, Multi-provider Support, Voice Interaction.",
+    status: "ACTIVE — Stable",
     github: "https://github.com/raghavendrashivam474/aryntra-tarka",
     apk: ""
   }
 ]
 
 // ============================================================
-// OTHER SYSTEMS — Previous, experimental, and supporting work
-// Preserved as evidence of the engineering journey.
+// OTHER SYSTEMS — Previous, experimental, and supporting work.
+// tech remains a string (rendered as plain text, not tokenized).
 // ============================================================
 
 export const otherSystems = [
@@ -126,6 +162,5 @@ export const otherSystems = [
     tech: "React · Supabase · Data Visualization",
     github: "https://github.com/raghavendrashivam474/GradeFlow",
     apk: ""
-  }]
-
-
+  }
+]
