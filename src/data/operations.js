@@ -1,34 +1,34 @@
+﻿// ============================================================
 // src/data/operations.js
-// Current Operations data for the Humanoid.jsx subsection.
-// Update mission statuses and labels here.
+// Current operational status — consumed by Humanoid.jsx.
+// Answers: "What is Raghav actively working on right now?"
+// ============================================================
 
-export const currentOperations = [
+const operations = [
   {
-    id: "syaahi-ops",
-    label: "ACTIVE",
-    title: "Syaahi",
-    version: "v0.2.0",
-    display: "Syaahi v0.2.0",
+    id: "op-01",
+    status: "ACTIVE",
+    name: "Aryntra Anveksha",
+    description: "Organizational Intelligence",
+    detail:
+      "Institutional knowledge ingestion, semantic indexing, and natural language querying over organizational knowledge graphs."
   },
   {
-    id: "gradeflow-ops",
-    label: "BUILDING",
-    title: "GradeFlow",
-    version: "MVP",
-    display: "GradeFlow MVP",
+    id: "op-02",
+    status: "ACTIVE",
+    name: "Aryntra Aayaam",
+    description: "Developer Intelligence",
+    detail:
+      "Software repository analysis, codebase relationship mapping, and developer-facing intelligence over complex software systems."
   },
   {
-    id: "schoolflow-ops",
-    label: "RESEARCH",
-    title: "SchoolFlow OS",
-    version: null,
-    display: "SchoolFlow OS",
-  },
-  {
-    id: "ai-ops",
-    label: "EXPLORING",
-    title: "AI Products & Intelligent Systems",
-    version: null,
-    display: "AI Products & Intelligent Systems",
-  },
-];
+    id: "op-03",
+    status: "ACTIVE — Stabilizing",
+    name: "Aryntra Tarka",
+    description: "Local AI Infrastructure",
+    detail:
+      "Modular AI orchestration backend with intelligent planner (~90% baseline), tool registry, prompt building, and execution planning."
+  }
+]
+
+export default operations

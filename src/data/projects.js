@@ -1,90 +1,131 @@
+﻿// ============================================================
 // src/data/projects.js
-// Project mission data for Transformation.jsx
-// Update content here. Never touch MissionCard.jsx or Transformation.jsx for content changes.
+// SINGLE SOURCE OF TRUTH for all mission and project data.
+// Transformation.jsx imports from here — no local project arrays.
+// ============================================================
 
-export const projects = [
+// ============================================================
+// ACTIVE MISSIONS — Flagship systems currently being built
+// ============================================================
+
+export const activeMissions = [
   {
-    id: "syaahi",
-    title: "Syaahi",
-    tagline: "Where emotions become words.",
+    id: "01",
+    title: "Aryntra Anveksha",
+    tagline: "Organizational Intelligence",
     preview: [
-      "Personal expression platform",
-      "Poetry, journals, letters & memories",
-      "Preserve and revisit meaningful moments",
+      "Institutional knowledge graph construction",
+      "Document ingestion and semantic indexing",
+      "Natural language querying over org knowledge",
+      "Context-aware retrieval and summarization"
     ],
     problem:
-      "People have emotions, memories, and stories they want to capture — but no dedicated space designed for personal, meaningful writing.",
+      "Organizations accumulate vast institutional knowledge across documents, wikis, and conversations — yet this knowledge remains fragmented and practically inaccessible. Teams waste hours searching for information that already exists somewhere in the system.",
     solution:
-      "Syaahi provides a calm, focused platform for poetry, journals, letters, and memories. Designed for expression, preservation, and reflection.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Node.js"],
-    impact: "Active Development — v0.2.0 in progress",
+      "Anveksha is an organizational intelligence system that ingests institutional documents, constructs a semantic knowledge layer, and enables natural language querying over the organization's collective knowledge. It makes existing knowledge findable and actionable.",
+    tech: "Python · LangChain · Vector Databases · Semantic Search · Document Parsing · LLM Integration",
+    impact:
+      "Transforms static document repositories into queryable, living knowledge systems that surface the right information when teams need it.",
     status: "ACTIVE",
-    links: {
-      github: "",
-      release: "",
-    },
+    github: "https://github.com/raghavendrashivam474/Aryntra_Anveksha",
+    apk: ""
+  },
+
+  {
+    id: "02",
+    title: "Aryntra Aayaam",
+    tagline: "Developer Intelligence",
+    preview: [
+      "Software repository analysis and understanding",
+      "Codebase relationship and dependency mapping",
+      "Code capability and impact surface extraction",
+      "Developer-facing intelligence layer over software systems"
+    ],
+    problem:
+      "Software systems grow in complexity faster than any individual's ability to understand them. Developers spend significant time orienting themselves in unfamiliar codebases, tracing dependencies, and understanding the impact surface of changes — time that should be spent building.",
+    solution:
+      "Aayaam is a developer intelligence system that analyzes software repositories to extract structure, relationships, capabilities, and evolution patterns. It builds an understanding layer over codebases so developers can navigate and reason about software systems faster.",
+    tech: "Python · Static Analysis · AST Parsing · Graph Structures · LLM Integration · Repository Indexing",
+    impact:
+      "Reduces the cognitive overhead of working with complex software systems by building a machine-readable understanding of what a codebase does, how it is structured, and how its parts relate.",
+    status: "ACTIVE",
+    github: "https://github.com/raghavendrashivam474/aryntra-aayaam",
+    apk: ""
+  },
+
+  {
+    id: "03",
+    title: "Aryntra Tarka",
+    tagline: "Local AI Infrastructure",
+    preview: [
+      "Modular AI orchestration backend",
+      "Intelligent planner with ~90% baseline accuracy",
+      "Tool registry: calculator, datetime, search, weather",
+      "Prompt building, expression normalization, execution planning"
+    ],
+    problem:
+      "Building AI applications that rely entirely on cloud APIs creates dependency, latency, and cost problems. There is no clean, modular infrastructure layer for running AI planning and tool orchestration locally — forcing builders to either over-engineer from scratch or accept cloud lock-in.",
+    solution:
+      "Tarka is a local AI infrastructure and intelligent orchestration framework. It provides a modular backend with an intelligent planner, a tool registry with concrete tool implementations, prompt construction pipelines, expression normalization, and execution planning — designed to run AI reasoning workloads locally and reliably.",
+    tech: "Python · Local LLM Inference · Tool Registry Architecture · Prompt Engineering · Execution Planning · Planner Evaluation",
+    impact:
+      "Current planner baseline at approximately 90% accuracy. Active sprint focus on planner stabilization and execution reliability. Provides a reusable AI infrastructure foundation for the broader Aryntra ecosystem.",
+    status: "ACTIVE — Stabilizing",
+    github: "https://github.com/raghavendrashivam474/aryntra-tarka",
+    apk: ""
+  }
+]
+
+// ============================================================
+// OTHER SYSTEMS — Previous, experimental, and supporting work
+// Preserved as evidence of the engineering journey.
+// ============================================================
+
+export const otherSystems = [
+  {
+    id: "OS-01",
+    title: "Syaahi",
+    tagline: "Ink-to-text conversion for regional languages",
+    status: "PREVIOUS",
+    tech: "React Native · ML · OCR",
+    github: "https://github.com/raghavendrashivam474/syaahi",
+    apk: ""
   },
   {
-    id: "gradeflow",
+    id: "OS-02",
+    title: "PRISM",
+    tagline: "Research intelligence and knowledge synthesis system",
+    status: "EXPERIMENTAL",
+    tech: "Python · NLP · Knowledge Graphs",
+    github: "https://github.com/raghavendrashivam474/prism",
+    apk: ""
+  },
+  {
+    id: "OS-03",
+    title: "Dev-Vault",
+    tagline: "Developer resource organization and retrieval system",
+    status: "PREVIOUS",
+    tech: "React · Node.js · MongoDB",
+    github: "https://github.com/raghavendrashivam474/dev-vault",
+    apk: ""
+  },
+  {
+    id: "OS-04",
+    title: "Backtrace",
+    tagline: "Automated error tracing and root cause analysis",
+    status: "EXPERIMENTAL",
+    tech: "Python · Log Analysis · LLM Integration",
+    github: "https://github.com/raghavendrashivam474/Aryntra-Backtrace",
+    apk: ""
+  },
+  {
+    id: "OS-05",
     title: "GradeFlow",
-    tagline: "Understand performance beyond marks.",
-    preview: [
-      "Academic analytics platform",
-      "Track progress and identify trends",
-      "Built for students, teachers, and institutions",
-    ],
-    problem:
-      "Marks alone don't tell the full story. Students and educators lack clear visibility into performance patterns and actionable academic insights.",
-    solution:
-      "GradeFlow provides an analytics layer over academic data — tracking progress, surfacing trends, and helping all stakeholders make informed decisions.",
-    tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB"],
-    impact: "MVP Development — Core analytics engine in progress",
-    status: "BUILDING",
-    links: {
-      github: "",
-      release: "",
-    },
-  },
-  {
-    id: "vibeflow",
-    title: "VibeFlow",
-    tagline: "Organize the soundtrack of your life.",
-    preview: [
-      "Music intelligence platform",
-      "Mood-based discovery and organization",
-      "Personal music management reimagined",
-    ],
-    problem:
-      "Music libraries grow chaotic. Existing platforms optimize for streaming revenue, not for personal music organization and meaningful discovery.",
-    solution:
-      "VibeFlow puts the listener in control — intelligent playlist organization, mood-based experiences, and a personal relationship with your music.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "AI Systems"],
-    impact: "Research & Design — Architecture and UX in definition",
-    status: "RESEARCH",
-    links: {
-      github: "",
-      release: "",
-    },
-  },
-  {
-    id: "schoolflow-os",
-    title: "SchoolFlow OS",
-    tagline: "The operating system for modern institutions.",
-    preview: [
-      "Unified institutional platform",
-      "Academics, admin, and communication",
-      "Analytics and operations in one system",
-    ],
-    problem:
-      "Educational institutions operate across disconnected tools for academics, administration, communication, and analytics — creating friction at every level.",
-    solution:
-      "SchoolFlow OS is a long-term vision to unify every institutional function into a single, coherent operating system built for modern education.",
-    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Supabase", "AI Systems"],
-    impact: "Vision Stage — Research and system architecture ongoing",
-    status: "VISION",
-    links: {
-      github: "",
-      release: "",
-    },
-  },
-];
+    tagline: "Academic performance tracking and analytics",
+    status: "PREVIOUS",
+    tech: "React · Supabase · Data Visualization",
+    github: "https://github.com/raghavendrashivam474/GradeFlow",
+    apk: ""
+  }]
+
+

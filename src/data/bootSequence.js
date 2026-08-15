@@ -1,17 +1,12 @@
-// src/data/bootSequence.js
-// Boot sequence lines for SystemBoot.jsx typewriter animation.
-// Update narrative lines here. Timing and animation behavior unchanged.
-
-export const bootLines = [
+﻿export const bootLines = [
   "> Initializing Evolution OS...",
   "> Loading Builder Profile...",
-  "> Identity: Engineer | Builder | Founder",
-  "> Focus Areas: AI • Education • Creativity",
+  "> Identity: Engineer | Builder",
+  "> Focus: AI · Systems · Intelligence",
   "> Loading Active Missions...",
-  "> Syaahi Loaded",
-  "> GradeFlow Loaded",
-  "> VibeFlow Loaded",
-  "> SchoolFlow OS Loaded",
+  "> Aryntra Anveksha Loaded",
+  "> Aryntra Aayaam Loaded",
+  "> Aryntra Tarka Loaded",
   "> Synchronizing Systems...",
-  "> Evolution OS Ready.",
-];
+  "> Evolution OS Ready."
+]

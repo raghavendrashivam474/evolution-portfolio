@@ -1,4 +1,4 @@
-export default function Human() {
+﻿export default function Human({ skipToSection }) {
   return (
     <section
       className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden"
@@ -6,7 +6,7 @@ export default function Human() {
         background: 'radial-gradient(circle at center, #111 0%, #000 100%)'
       }}
     >
-      {/* Subtle noise texture — unchanged */}
+      {/* Subtle noise texture â€” unchanged */}
       <div
         className="absolute inset-0 opacity-[0.015]"
         style={{
@@ -14,12 +14,12 @@ export default function Human() {
         }}
       ></div>
 
-      {/* Subtle glow — unchanged */}
+      {/* Subtle glow â€” unchanged */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-400/5 rounded-full blur-3xl"></div>
 
       <div style={{ maxWidth: '900px', width: '100%', position: 'relative', zIndex: 10 }}>
 
-        {/* Status Badge — unchanged */}
+        {/* Status Badge â€” unchanged */}
         <div style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -41,7 +41,7 @@ export default function Human() {
           </span>
         </div>
 
-        {/* Heading — updated */}
+        {/* Heading â€” updated */}
         <h1 style={{
           fontSize: 'clamp(40px, 8vw, 72px)',
           fontWeight: 700,
@@ -53,7 +53,7 @@ export default function Human() {
           <span style={{ color: '#9ca3af' }}>I build, ship, and found.</span>
         </h1>
 
-        {/* Identity Tags — updated */}
+        {/* Identity Tags â€” updated */}
         <div style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -78,7 +78,7 @@ export default function Human() {
           ))}
         </div>
 
-        {/* Description — updated */}
+        {/* Description â€” updated */}
         <p style={{
           fontSize: '18px',
           color: '#9ca3af',
@@ -90,9 +90,9 @@ export default function Human() {
           Turning ideas into systems that matter.
         </p>
 
-        {/* Buttons — unchanged */}
+        {/* Buttons â€” unchanged */}
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-          <a href="#projects" style={{
+          <a href="#projects" onClick={(e) => { e.preventDefault(); skipToSection && skipToSection('projects') }} style={{
             backgroundColor: '#fff',
             color: '#000',
             padding: '12px 24px',
@@ -102,7 +102,7 @@ export default function Human() {
           }}>
             View Missions
           </a>
-          <a href="#contact" style={{
+          <a href="#contact" onClick={(e) => { e.preventDefault(); skipToSection && skipToSection('contact') }} style={{
             border: '1px solid rgba(255,255,255,0.2)',
             padding: '12px 24px',
             borderRadius: '25px',
@@ -114,7 +114,7 @@ export default function Human() {
           </a>
         </div>
 
-        {/* Scroll Indicator — unchanged */}
+        {/* Scroll Indicator â€” unchanged */}
         <div style={{ marginTop: '80px', textAlign: 'center' }}>
           <p style={{
             fontSize: '14px',
@@ -136,3 +136,4 @@ export default function Human() {
     </section>
   )
 }
+
