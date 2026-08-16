@@ -121,18 +121,18 @@ export const otherSystems = [
   {
     id: "OS-01",
     title: "Syaahi",
-    tagline: "Ink-to-text conversion for regional languages",
+    tagline: "Poetry platform for writers and readers",
     status: "PREVIOUS",
-    tech: "React Native · ML · OCR",
+    tech: "Flutter Web · Node.js",
     github: "https://github.com/raghavendrashivam474/syaahi",
     apk: ""
   },
   {
     id: "OS-02",
     title: "PRISM",
-    tagline: "Research intelligence and knowledge synthesis system",
+    tagline: "Programming Interactive State Machine",
     status: "EXPERIMENTAL",
-    tech: "Python · NLP · Knowledge Graphs",
+    tech: "Next.js · TypeScript · Tailwind CSS · Monaco Editor · FastAPI · C++ Execution",
     github: "https://github.com/raghavendrashivam474/prism",
     apk: ""
   },
