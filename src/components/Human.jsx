@@ -1,7 +1,7 @@
 ﻿export default function Human({ skipToSection }) {
   return (
     <section
-      className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-[85px] relative overflow-hidden"
       style={{
         background: 'radial-gradient(circle at center, #111 0%, #000 100%)'
       }}
@@ -28,8 +28,7 @@
           border: '1px solid rgba(52, 211, 153, 0.2)',
           borderRadius: '20px',
           padding: '8px 16px',
-          marginBottom: '24px',
-          transform: 'translateY(-5px)'
+          marginBottom: '24px'
         }}>
           <span style={{
             width: '8px',
@@ -137,6 +136,7 @@
     </section>
   )
 }
+
 
 
 
