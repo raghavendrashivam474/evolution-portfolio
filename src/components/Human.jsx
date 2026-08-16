@@ -28,7 +28,8 @@
           border: '1px solid rgba(52, 211, 153, 0.2)',
           borderRadius: '20px',
           padding: '8px 16px',
-          marginBottom: '24px'
+          marginBottom: '24px',
+          transform: 'translateY(-5px)'
         }}>
           <span style={{
             width: '8px',
@@ -136,4 +137,6 @@
     </section>
   )
 }
+
+
 
