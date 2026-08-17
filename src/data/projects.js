@@ -5,7 +5,7 @@
 // Content is verified against the current public repositories.
 // Do NOT infer capabilities from names, roadmaps, or vision docs.
 // Source of truth hierarchy:
-//   Actual repository → Current README → Current implementation → this file
+//   Actual repository â†’ Current README â†’ Current implementation â†’ this file
 //
 // tech: activeMissions use arrays (rendered as badges)
 //       otherSystems use strings   (rendered as plain text)
@@ -44,8 +44,8 @@ export const activeMissions = [
       "React Testing Library"
     ],
     impact:
-      "v0.9.4 — M9.4 Dashboard Analytics. M1–M9.4 completed. 1126 backend tests passed, 132 frontend tests passed, frontend production build passed. Next: M9.5 Reports UI → M9.6 Audit UI.",
-    status: "ACTIVE — M9.4 Complete",
+      "v0.9.4 â€” M9.4 Dashboard Analytics. M1â€“M9.4 completed. 1126 backend tests passed, 132 frontend tests passed, frontend production build passed. Next: M9.5 Reports UI â†’ M9.6 Audit UI.",
+    status: "ACTIVE â€” M9.4 Complete",
     github: "https://github.com/raghavendrashivam474/Aryntra_Anveksha",
     apk: ""
   },
@@ -72,8 +72,8 @@ export const activeMissions = [
       "JSON Output Architecture"
     ],
     impact:
-      "v1.0.0 — Sprint 1: Foundation. CLI operational. Project analysis begins in Sprint 2.",
-    status: "ACTIVE — Foundation",
+      "v1.0.0 â€” Sprint 1: Foundation. CLI operational. Project analysis begins in Sprint 2.",
+    status: "ACTIVE â€” Foundation",
     github: "https://github.com/raghavendrashivam474/aryntra-aayaam",
     apk: ""
   },
@@ -105,15 +105,15 @@ export const activeMissions = [
       "Tailwind CSS"
     ],
     impact:
-      "v1.0.0 — Stable. Autonomous planning, local-first AI, tool execution, SQLite persistence, and streaming responses complete. Planned: Web Search, RAG, File Understanding, Plugin System, Multi-provider Support, Voice Interaction.",
-    status: "ACTIVE — Stable",
+      "v1.0.0 â€” Stable. Autonomous planning, local-first AI, tool execution, SQLite persistence, and streaming responses complete. Planned: Web Search, RAG, File Understanding, Plugin System, Multi-provider Support, Voice Interaction.",
+    status: "ACTIVE â€” Stable",
     github: "https://github.com/raghavendrashivam474/aryntra-tarka",
     apk: ""
   }
 ]
 
 // ============================================================
-// OTHER SYSTEMS — Previous, experimental, and supporting work.
+// OTHER SYSTEMS â€” Previous, experimental, and supporting work.
 // tech remains a string (rendered as plain text, not tokenized).
 // ============================================================
 
@@ -123,44 +123,33 @@ export const otherSystems = [
     title: "Syaahi",
     tagline: "Poetry platform for writers and readers",
     status: "PREVIOUS",
-    tech: "Flutter Web · Node.js",
+    tech: "Flutter Web Â· Node.js",
     github: "https://github.com/raghavendrashivam474/syaahi",
     apk: ""
   },
   {
-    id: "OS-02",
-    title: "PRISM",
-    tagline: "Programming Interactive State Machine",
-    status: "EXPERIMENTAL",
-    tech: "Next.js · TypeScript · Tailwind CSS · Monaco Editor · FastAPI · C++ Execution",
-    github: "https://github.com/raghavendrashivam474/prism",
-    apk: ""
-  },
-  {
-    id: "OS-03",
-    title: "Dev-Vault",
+    id: "OS-02",`r`n    title: "Dev-Vault",
     tagline: "Developer resource organization and retrieval system",
     status: "PREVIOUS",
-    tech: "React · Node.js · MongoDB",
+    tech: "React Â· Node.js Â· MongoDB",
     github: "https://github.com/raghavendrashivam474/dev-vault",
     apk: ""
   },
   {
-    id: "OS-04",
-    title: "Backtrace",
+    id: "OS-03",`r`n    title: "Backtrace",
     tagline: "Automated error tracing and root cause analysis",
     status: "EXPERIMENTAL",
-    tech: "Python · Log Analysis · LLM Integration",
+    tech: "Python Â· Log Analysis Â· LLM Integration",
     github: "https://github.com/raghavendrashivam474/Aryntra-Backtrace",
     apk: ""
   },
   {
-    id: "OS-05",
-    title: "GradeFlow",
+    id: "OS-04",`r`n    title: "GradeFlow",
     tagline: "Academic performance tracking and analytics",
     status: "PREVIOUS",
-    tech: "React · Supabase · Data Visualization",
+    tech: "React Â· Supabase Â· Data Visualization",
     github: "https://github.com/raghavendrashivam474/GradeFlow",
     apk: ""
   }
 ]
+
