@@ -2,9 +2,10 @@ export default function Humanoid() {
   const skills = [
     { category: "Frontend & UI", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Flutter Web"] },
     { category: "Backend & APIs", items: ["Python", "FastAPI", "Node.js", "Express.js", "REST APIs"] },
-    { category: "Data & Infrastructure", items: ["PostgreSQL", "MongoDB", "SQLite", "Supabase", "Redis", "Docker"] },
+    { category: "Data & Storage", items: ["PostgreSQL", "MongoDB", "SQLite", "Supabase", "Redis", "pgvector"] },
     { category: "AI & Intelligence", items: ["LLM Integrations", "Ollama", "RAG", "Embeddings", "AI Agents", "Prompt Engineering"] },
-    { category: "Engineering & Testing", items: ["Git", "Pytest", "Jest", "Vitest", "Playwright", "C++ Execution"] }
+    { category: "Engineering & Testing", items: ["Git", "Pytest", "Jest", "Vitest", "Playwright", "Docker"] },
+    { category: "Systems & Runtime", items: ["C++", "Go", "Rust", "Tauri", "SSE", "Modular Architecture"] }
   ]
   const nextModules = [
     "System Architecture",
