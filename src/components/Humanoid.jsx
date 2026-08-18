@@ -14,12 +14,10 @@ export default function Humanoid() {
   ]
 
   const currentOperations = [
-    { label: "ACTIVE",     display: "Syaahi v0.2.0" },
-    { label: "BUILDING",   display: "GradeFlow MVP" },
-    { label: "RESEARCH",   display: "SchoolFlow OS" },
-    { label: "EXPLORING",  display: "AI Products & Intelligent Systems" }
+    { label: "ACTIVE", display: "Aryntra Anveksha" },
+    { label: "ACTIVE", display: "Aryntra Aayaam" },
+    { label: "ACTIVE", display: "Aryntra Tarka" }
   ]
-
   const statusColors = {
     ACTIVE:    "#34d399",
     BUILDING:  "#00cfff",
