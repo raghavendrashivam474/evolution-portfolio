@@ -13,8 +13,7 @@ import React from "react"
 import MissionCard from "./MissionCard"
 import { activeMissions, otherSystems } from "../data/projects"
 
-const Transformation = ({ visible }) => {
-  if (!visible) return null
+const Transformation = () => {
 
   return (
     <section
