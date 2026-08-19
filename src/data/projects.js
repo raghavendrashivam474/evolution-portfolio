@@ -132,7 +132,7 @@ export const otherSystems = [
     title: "Dev-Vault",
     tagline: "Developer resource organization and retrieval system",
     status: "PREVIOUS",
-    tech: "React · Node.js · MongoDB",
+    tech: "Vanilla JavaScript · IndexedDB",
     github: "https://github.com/raghavendrashivam474/dev-vault",
     apk: ""
   },
